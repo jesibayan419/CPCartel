@@ -4,12 +4,19 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     list-style-type: none;
-    padding: 0;
-}
+    padding: 0px;
 
-li a {
+}
+a {
+    padding: 0.8rem;
+}
+li img {
     height: 10rem;
     width: 10rem;
+}
+li a {
+    height: 20rem;
+    width: 12rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -22,4 +29,9 @@ li a {
 li a:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+.productSpecs {
+    color: gray;
+    font-size: 0.8rem;
 }
