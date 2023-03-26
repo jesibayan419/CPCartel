@@ -8,15 +8,16 @@ ul {
 
 }
 a {
-    padding: 0.8rem;
+    padding: 1rem;
 }
 li img {
+    margin-left: 1.6em;
     height: 10rem;
     width: 10rem;
 }
 li a {
     height: 20rem;
-    width: 12rem;
+    width: 15rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
     margin: 0.5rem;
@@ -24,6 +25,7 @@ li a {
     flex-direction: column;
     overflow: hidden;
     color: #3d4aff;
+    box-shadow: 5px 5px 5px rgb(68, 68, 68);
 }
 
 li a:hover {
@@ -34,4 +36,15 @@ li a:hover {
 .productSpecs {
     color: gray;
     font-size: 0.8rem;
+}
+
+.content {
+    padding: .5rem 1 rem;
+    position: relative;
+}
+.name {
+    margin-top: 1rem;
+}
+.price {
+    margin: 1.8rem 0px;
 }
