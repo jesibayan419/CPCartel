@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { ProductService } from '../services/product/product.service';
 import { Product } from '../shared/models/Product';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,14 @@ import { Product } from '../shared/models/Product';
 export class HomeComponent implements OnInit {
 
   products:Product[] = [];
-  constructor(private productService:ProductService) { }
+  constructor(private productService:ProductService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getAll();
+    this.route.params.subscribe(params => {
+      if(params["searchTerm"])
+        this.products = this.productService.getAll().filter(product => product.name.toLowerCase().includes(params["searchTerm"].toLowerCase()))
+      else
+      this.products = this.productService.getAll();
+    })
   } 
 }
