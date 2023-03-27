@@ -33,3 +33,7 @@ nav ul li a {
     padding: 1em;
     display: inline-block;
 }
+
+.fas {
+    font-size: 1rem;
+}

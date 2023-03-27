@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   products:Product[] = [];
   
   p:number = 1;
-  itemsPerPage:number = 3;
+  itemsPerPage:number = 4;
   totalProduct:any;
 
   constructor(private productService:ProductService, private route:ActivatedRoute) { }
