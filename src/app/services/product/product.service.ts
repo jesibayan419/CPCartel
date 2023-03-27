@@ -8,6 +8,10 @@ export class ProductService {
 
   constructor() { }
 
+  getProductById(id: number): Product {
+    return this.getAll().find(product => product.id == id)!;
+  }
+
   getAll():Product[]{
     return [
       {

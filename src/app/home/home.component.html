@@ -1,7 +1,7 @@
 <app-search></app-search>
 <ul>
     <li *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
-        <a>
+        <a routerLink="/product/{{product.id}}">
             <img src="{{product.image}}" alt="">
             <div class="content">
                 <div class="name">

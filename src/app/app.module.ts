@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms'
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
+    ProductPageComponent,
   ],
   imports: [
     BrowserModule,
