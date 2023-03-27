@@ -16,3 +16,11 @@ body {
 a {
     text-decoration: none;
 }
+
+.ngx-pagination {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+}
