@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms'
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
     ]),

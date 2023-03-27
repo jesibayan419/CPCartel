@@ -11,6 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   products:Product[] = [];
+  
+  p:number = 1;
+  itemsPerPage:number = 3;
+  totalProduct:any;
+
   constructor(private productService:ProductService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -19,6 +24,7 @@ export class HomeComponent implements OnInit {
         this.products = this.productService.getAll().filter(product => product.name.toLowerCase().includes(params["searchTerm"].toLowerCase()))
       else
       this.products = this.productService.getAll();
+      this.totalProduct = this.productService.getAll().length;
     })
   } 
 }
