@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
     HomeComponent,
     SearchComponent,
     ProductPageComponent,
+    CartPageComponent,
   ],
   imports: [
     BrowserModule,
