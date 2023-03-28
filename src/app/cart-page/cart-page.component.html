@@ -1,40 +1,54 @@
-<ul>
-    <li *ngFor="let cartItem of cart.items">
-        <div>
-            <img [src]="cartItem.product.image" [alt]="cartItem.product.name">
-        </div>
+<app-not-found [visible]="!cart || cart.items.length <= 0"
+notFoundMessage="Cart Page Is Empty!"
+resetLinkText="Continue Shopping"
+>
 
-        <div>
-            <a routerLink="/product/{{cartItem.product.id}}">
-                {{cartItem.product.name}}
-            </a>
-        </div>
+</app-not-found>
+<div *ngIf="cart && cart.items.length > 0" class="container">
+    <ul>
+        <li *ngFor="let cartItem of cart.items">
+            <div>
+                <img [src]="cartItem.product.image" [alt]="cartItem.product.name">
+            </div>
 
-        <div>
-            <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
+            <div>
+                <a routerLink="/product/{{cartItem.product.id}}">
+                    {{cartItem.product.name}}
+                </a>
+            </div>
 
-        <div>
-            {{cartItem.price|currency:"PHP":"symbol"}}
-        </div>
+            <div>
+                <select #quantitySelect (change)="changeQuantity(cartItem, quantitySelect.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
 
-        <div>
-            <button class="remove-button" (click)="removeFromCart(cartItem)">
-                Remove
-            </button>
-        </div>
-    </li>
-</ul>
+            <div>
+                {{cartItem.price|currency:"PHP":"symbol"}}
+            </div>
 
-<div class="checkout">
-    <div>
-        <div class="products-count">{{cart.items.length}}</div>
-        <div class="total-price">{{cart.totalPrice|currency:"PHP":"symbol"}}</div>
+            <div>
+                <button class="remove-button" (click)="removeFromCart(cartItem)">
+                    Remove
+                </button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="checkout">
+        <div>
+            <div class="products-count">{{cart.items.length}}</div>
+            <div class="total-price">{{cart.totalPrice|currency:"PHP":"symbol"}}</div>
+            <button class="order-button">Place Order</button>
+        </div>
     </div>
 </div>

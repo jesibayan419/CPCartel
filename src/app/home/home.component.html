@@ -1,6 +1,7 @@
 <app-search></app-search>
-
+<app-not-found [visible]="!products || products.length <= 0" resetLinkText="Reset Search"></app-not-found>
 <ul>
+
     <li *ngFor="let product of products | paginate: { itemsPerPage: itemsPerPage, currentPage: p }">
         <a routerLink="/product/{{product.id}}">
             <img src="{{product.image}}" alt="">
@@ -22,4 +23,17 @@
 </ul>
 <div class="pages">
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        <div class="pageItems">
+        <label>Items per page:
+            <select class = "ipp" [(ngModel)]="itemsPerPage">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            </select>
+        </label>
+    </div>  
 </div>

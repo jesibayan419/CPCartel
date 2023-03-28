@@ -27,6 +27,6 @@ export class ProductPageComponent implements OnInit {
 
   addToCart() {
     this.cartService.addToCart(this.product);
-    this.router.navigateByUrl('/cart-page');
+    alert("Product Added to Cart!");
   }
 }

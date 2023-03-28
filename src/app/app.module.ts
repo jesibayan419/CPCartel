@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
     SearchComponent,
     ProductPageComponent,
     CartPageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
